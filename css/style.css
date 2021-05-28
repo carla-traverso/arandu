@@ -1,4 +1,4 @@
-* {
+/* Reset */* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* General */
 body {
     font-family: 'Playfair Display', serif;
 } 
@@ -28,6 +29,15 @@ section, header {
     padding: 10vw;
 }
 
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+/* Menu ppal*/
 nav {
     position: fixed;
     top: 0;
@@ -36,7 +46,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 15vh;
+    height: 12vh;
     padding: 1vw;
     font-size: 20px;
     font-weight: bold;
@@ -81,15 +91,47 @@ ul li {
     margin: 1vw;
 }
 
-section#sobre {
+#logo {
+    padding: 20px 0;
+    margin-top: 8px;
+    width: 166px;
+}
+
+/* Sections */
+section {
     background-color: #f3f6f3;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 100vh;
 }
 
+/* Articles */
+article {
+    padding: 2vw;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+figure {
+    padding: 3vw;
+}
+
+article figure img {
+    border: 1px solid white
+}
+/* Ver que no se superponga e hover de las img con el menu!!! */
+figure img:hover {
+    filter: saturate(150%);;
+}
+
+/* Footer */
 footer#contact {
     display: flex;
     flex-direction: column;
@@ -99,6 +141,10 @@ footer#contact {
     background-color: #d63d3c;
     color: #f3f6f3;
     font-size: 30px;
+}
+
+p small {
+    font-size: 10px;
 }
 
 a i {
@@ -155,7 +201,6 @@ a i:hover {
     section#sobre {
         padding: 20vw 10vw;
     }
-
 
     #logo {
         width: 150px;
