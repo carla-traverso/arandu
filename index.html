@@ -34,7 +34,10 @@
                     <a href="#sobre">Sobre</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#contact"> Contacto</a>
+                    <a href="#sesiones"> Sesiones</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#form"> Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -57,44 +60,40 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repudiandae eius praesentium molestias
                 quisquam doloribus neque nihil? Necessitatibus sit soluta officiis nostrum quaerat error neque
                 voluptates! Minus alias culpa sed?</p>
+            <div id="contenedor-img">
+                <figure>
+                    <img src="img/cerato2.jpg" alt="Cerato">
+                </figure>
+                <figure>
+                    <img src="img/rockrose2.jpg" alt="Rockrose">
+                </figure>
+                <figure>
+                    <img src="img/holly2.jpg" alt="Holly">
+                </figure>
+            </div>
         </section>
-        <section>
-            <article>
-                <h2>Sesiones
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni iure eum necessitatibus
-                    corporis? Ea est incidunt enim culpa accusamus nostrum exercitationem recusandae, voluptatibus optio
-                    officiis! Facere odio sunt nihil.
-                </p>
-            </article>
-            <article>
-                <h2>Formulas
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illum numquam asperiores, atque
-                    distinctio magni dignissimos nesciunt ratione. Tenetur quidem ut similique magni cumque a! Adipisci
-                    veritatis tempora dolores eveniet.
-                </p>
-                <div>
-                    <figure>
-                        <img src="img/cerato.jpg" alt="Cerato">
-                    </figure>
-                    <figure>
-                        <img src="img/rockrose.jpg" alt="Rockrose">
-                    </figure>
-                    <figure>
-                        <img src="img/holly.jpg" alt="Holly">
-                    </figure>
-                </div>
-            </article>
+        <section id="sesiones">
+            <h2>Sesiones
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni iure eum necessitatibus
+                corporis? Ea est incidunt enim culpa accusamus nostrum exercitationem recusandae, voluptatibus optio
+                officiis! Facere odio sunt nihil.
+            </p>
         </section>
 
-        <!-- <section id="form">F
-           
-
-        </section> -->
-
+        <section id="form" action="http://static.altcooperativa.com/forms/">
+            <h2>Contáctame</h2>
+            <form>
+                <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required>
+                <input type="email" id="mail" name="mail" placeholder="tuemail@ejemplo.com" required>
+                <!-- Se autocompleta con espacios!! Ver como Solucionarlo. -->
+                <textarea id="consulta" name="consulta" autocomplete="off" rows="4" cols="40" maxlength="300"
+                    placeholder="Déjame tu consulta">
+                </textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
     </main>
 
     <footer id="contact">

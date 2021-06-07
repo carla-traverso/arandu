@@ -23,6 +23,7 @@ header {
 h1 {
     text-align: center;
     color: #f3f6f3;
+    padding:1vw;
 }
 
 section, header {
@@ -31,10 +32,12 @@ section, header {
 
 h2 {
     text-align: center;
+    padding: 1vw;
 }
 
 p {
     text-align: center;
+    margin: 1vw;
 }
 
 /* Menu ppal*/
@@ -98,7 +101,8 @@ ul li {
 }
 
 /* Sections */
-section {
+section#sobre, 
+section#sesiones {
     background-color: #f3f6f3;
     min-height: 100vh;
     display: flex;
@@ -107,29 +111,76 @@ section {
     justify-content: space-evenly;
 }
 
-/* Articles */
-article {
-    padding: 2vw;
+section#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 70vh;
+    background-color: #d63d3c;
+    color: #f3f6f3;
+    font-size: 20px;
 }
 
-div {
+div#contenedor-img {
+    min-width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-figure {
-    padding: 3vw;
+div figure {
+    padding: 1vw;
 }
 
-article figure img {
+div figure img {
     border: 1px solid white
 }
 /* Ver que no se superponga e hover de las img con el menu!!! */
 figure img:hover {
-    filter: saturate(150%);;
+    filter: saturate(150%);
 }
+
+/* Formulario */
+form {
+    min-width: 70vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input,
+textarea {
+    display:block;
+    text-align: start;
+    appearance: auto;
+    cursor: text;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-shadow: none;
+    text-indent: 0px;
+    background-color: -internal-light-dark(#f3f6f3), rgb(59, 59, 59);
+    color: -internal-light-dark(black, #f3f6f3);
+    border-radius: 5px;
+} 
+
+input {
+    width: 20vw;
+    height: 5vh;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+textarea::placeholder {
+    text-align: center;
+}
+
 
 /* Footer */
 footer#contact {
@@ -137,7 +188,7 @@ footer#contact {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 100vh;
+    min-height: 30vh;
     background-color: #d63d3c;
     color: #f3f6f3;
     font-size: 30px;
@@ -145,6 +196,7 @@ footer#contact {
 
 p small {
     font-size: 10px;
+    text-align: center;
 }
 
 a i {
@@ -159,8 +211,7 @@ a i:hover {
     color:#f6bf00;
 }
 
- /* Responsive */
-
+/* Responsive */
 @media (max-width: 480px) {
     h1 {
         font-size: 32px;
@@ -186,6 +237,20 @@ a i:hover {
         font-size: 24px;
     }
 
+    div#contenedor-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -198,7 +263,9 @@ a i:hover {
         font-size: 20px;
     }
     
-    section#sobre {
+    section#sobre,
+    section#sesiones,
+    section#contact {
         padding: 20vw 10vw;
     }
 
@@ -210,8 +277,9 @@ a i:hover {
     ul.lista-menu {
         display: none;
     }
-    
-    /* Menu Responsive */
+
+   
+/* Menu Responsive */
 
     #menu-hambur-toggler {
         display: block;
@@ -228,9 +296,11 @@ a i:hover {
     body.menu-mobile-activo #abrir-menu-mobile {
         display: none;   
     }
+
     body.menu-mobile-activo #cerrar-menu-mobile {
         display: block;   
     }
+
     body.menu-mobile-activo .lista-menu {
         display: flex;
         flex-direction: column;
